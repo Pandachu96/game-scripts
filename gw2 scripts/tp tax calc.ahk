@@ -25,9 +25,9 @@ ButtonOK:
 Gui, Submit, NoHide
 saleAfterTaxes := sellPrice - sellPrice * 0.15
 spread := Round(((saleAfterTaxes - buyPrice) * num), 4)
-profit := Round(spread / buyPrice * 100)
+profit := Round((saleAfterTaxes - buyPrice) / buyPrice * 100)
 
-MsgBox, 1, %title%, Net profit: %spread%`n`Profit(`%): %profit%`%
+MsgBox, 1, %title%, Net profit: %spread%g`n`Profit Margin: %profit%`%
 IfMsgBox Cancel
     ExitApp
 Reload
