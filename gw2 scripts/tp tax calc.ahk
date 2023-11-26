@@ -23,7 +23,7 @@ ExitApp
 
 ButtonOK:
 Gui, Submit, NoHide
-saleAfterTaxes := sellPrice - (sellPrice * 0.15)
+saleAfterTaxes := sellPrice - sellPrice * 0.15
 spread := Round(((saleAfterTaxes - buyPrice) * num), 4)
 profit := Round(spread / buyPrice * 100)
 
